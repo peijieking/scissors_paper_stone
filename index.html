@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>石头剪刀布 - 多人游戏</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">石头 · 剪刀 · 布</h1>
+            <p class="subtitle">多人对战游戏</p>
+        </header>
+
+        <!-- 游戏设置界面 -->
+        <div id="setupScreen" class="screen active">
+            <div class="setup-card">
+                <div class="setup-group">
+                    <label for="playerCount" class="setup-label">选择玩家数量</label>
+                    <select id="playerCount" class="player-select">
+                        <option value="2">2 人</option>
+                        <option value="3">3 人</option>
+                        <option value="4">4 人</option>
+                        <option value="5">5 人</option>
+                        <option value="6">6 人</option>
+                        <option value="7">7 人</option>
+                        <option value="8">8 人</option>
+                        <option value="9">9 人</option>
+                        <option value="10">10 人</option>
+                    </select>
+                </div>
+                <button id="startSetup" class="btn btn-primary">开始游戏</button>
+            </div>
+        </div>
+
+        <!-- 玩家选择界面 -->
+        <div id="playerSelectionScreen" class="screen">
+            <div class="selection-header">
+                <h2 class="screen-title">玩家选择</h2>
+                <p class="screen-subtitle">每位玩家选择你的手势（选择后会隐藏，倒计时结束后显示结果）</p>
+            </div>
+            
+            <div id="playersContainer" class="players-container"></div>
+            
+            <button id="playGame" class="btn btn-primary btn-large" disabled>开始对战</button>
+        </div>
+
+        <!-- 倒计时界面 -->
+        <div id="countdownScreen" class="screen">
+            <div class="countdown-container">
+                <div id="countdownNumber" class="countdown-number">3</div>
+                <p class="countdown-text">游戏即将开始</p>
+            </div>
+        </div>
+
+        <!-- 结果展示界面 -->
+        <div id="resultScreen" class="screen">
+            <div class="result-header">
+                <h2 class="screen-title">游戏结果</h2>
+                <p class="screen-subtitle">看看谁赢了！</p>
+            </div>
+            
+            <div id="resultsContainer" class="results-container"></div>
+            
+            <div class="winner-section">
+                <div id="winnerDisplay" class="winner-display"></div>
+            </div>
+            
+            <button id="playAgain" class="btn btn-secondary btn-large">再玩一次</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "name": "scissors-paper-stone-multiplayer",
+  "version": "1.0.0",
+  "description": "A beautiful multiplayer rock-paper-scissors game",
+  "main": "index.html",
+  "scripts": {
+    "build": "mkdir -p dist && cp index.html dist/ && cp style.css dist/ && cp game.js dist/",
+    "dev": "python -m http.server 49444",
+    "start": "python -m http.server 49444"
+  },
+  "keywords": [
+    "rock-paper-scissors",
+    "multiplayer",
+    "game"
+  ],
+  "author": "",
+  "license": "MIT",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peijieking/scissors_paper_stone.git"
+  },
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/peijieking/scissors_paper_stone/issues"
+  },
+  "homepage": "https://github.com/peijieking/scissors_paper_stone#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0"
+  }
+}
